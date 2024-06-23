@@ -1,0 +1,195 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1;
+}
+
+.post , .comments{
+    margin: 1rem 0;
+    background: #ffff;
+    padding: 1rem;
+}
+
+.post .post_info, .comments .comment_info {
+    gap: 1rem;
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.comment_info .user_name {
+    color: #3c9cc6;
+}
+.comment_info .data{
+    color: #c4c4c4c4;
+}
+.comment_info{
+    font-size: 0.8rem;
+
+}
+.button-delete {
+    display: grid;
+    justify-content: right;
+    margin-bottom: 3rem;
+    margin-top: -30px;
+}
+.button-delete button {
+    display: inline-block;
+    padding: .5rem 1rem;
+    color: #548eaa;
+    border: 1px solid #548eaa;
+    margin: 0;
+    background-color: white;
+    border-radius: .25rem;
+    transition: all .5s;
+}
+
+.post .post_info .username, .comments .comment_info .username {
+    font-weight: bold;
+}
+
+
+.post > h2 {
+    margin-bottom: 2rem;
+}
+
+.post .image {
+    margin-bottom: 1rem;
+    width: 100%;
+    max-height: 45vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    word-break: break-word;
+
+}
+
+.post .cover {
+    margin-bottom: 1rem;
+    width: 100%;
+    max-height: 45vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    word-break: break-word;
+}
+.post .content * {
+    word-break: break-word;
+    white-space: normal;
+    margin-bottom: 2rem;
+}
+
+.post .image img {
+    max-width: 100%;
+    max-height: 45vh;
+}
+
+.post .tags{
+    margin-top: 1rem;
+
+}
+
+
+
+.post .tags a{
+    padding: 3px 10px;
+    transition: border-color 0.25s ease-out;
+    white-space: nowrap;
+    color: #3c9cc6;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 12px;
+    line-height: 24px;
+
+}
+
+.post .tags a:hover{
+    border-color: #ffffff;
+}
+
+.post .post_stats {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.post .post_stats img {
+    width: 1rem;
+    height: 1rem;
+}
+
+.post .post_stats .stat {
+    display: flex;
+    align-content: center;
+    gap: .5rem;
+}
+
+.post .post_stats .stat p {
+    font-size: 1.3rem;
+}
+
+.comments h2{
+    margin-bottom: 2rem;
+}
+
+.comments .comment:not(:last-child){
+    margin-bottom: 3rem;
+}
+
+
+.comments form label {
+    margin-bottom: .5rem;
+}
+
+.comments form {
+    margin: 1rem 0;
+}
+
+.comments form label, .comments form textarea {
+    display: block;
+    width: 100%;
+}
+
+.comments textarea {
+    resize: none;
+    padding: .5rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.comments form button {
+    display: inline-block;
+    padding: .5rem 1rem;
+    color: white;
+    background: #3c9cc6;
+    border: 1px solid #3c9cc6;
+    margin: 1rem 0;
+    border-radius: .25rem;
+    transition: all .5s;
+    font-size: 1rem;
+}
+
+button#show_form {
+    background-color: white;
+    font-size: 1.2rem;
+}
+
+button#show_form:hover {
+    color: #4695bc;
+}
+
+.comments > button {
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 600px){
+    .post .tags p {
+        line-height: 1.75rem;
+    }
+
+    .post .tags a {
+        margin: .5rem;
+    }
+}

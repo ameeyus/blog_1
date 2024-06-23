@@ -1,0 +1,90 @@
+body{
+    display: flex;
+    flex-direction: column;
+
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.inner_container{
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+main .inner_container>div{
+    grid-column-start: 1;
+    grid-row-start: 1;
+    margin: auto;
+    width: 50%;;
+    display: none;
+}
+
+main .inner_container>div.active{
+    display: block;
+}
+
+form label, form input:not([type=checkbox]){
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 15px
+}
+
+form .switch{
+    background: #ffff;
+    padding: 1rem
+}
+
+form label{
+    margin-bottom: .5rem;
+}
+
+form input:not([type=checkbox]){
+    margin-bottom: 1.5rem;
+}
+
+form button{
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    background: #3c9cc6;
+    color: #f0f0f0;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    transition: background-color .5s;
+}
+
+form button:hover{
+    background: #163949;
+}
+
+.switch{
+    margin: 1rem 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.switch button{
+     background: none;
+     font-size: 1rem;
+     color: #3c9cc6;
+}
+
+@media screen and (max-width: 600px) {
+
+    main .inner_container>div{
+        width: 90%;
+        margin-top: max(1rem, auto);
+    }
+
+
+
+}
